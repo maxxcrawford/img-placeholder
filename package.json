@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "description": "Insert an img tag from placehold.it image into your code.",
   "activationEvents": ["img-placeholder:insert"],
-  "repository": "https://github.com/atom/img-placeholder",
+  "repository": "https://github.com/maxxcrawford/img-placeholder",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
