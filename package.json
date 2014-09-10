@@ -1,14 +1,15 @@
 {
   "name": "img-placeholder",
   "main": "./lib/img-placeholder",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Insert an img tag from placehold.it image into your code.",
-  "activationEvents": ["img-placeholder:insert"],
+  "activationEvents": [
+    "img-placeholder:insert"
+  ],
   "repository": "https://github.com/maxxcrawford/img-placeholder",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
