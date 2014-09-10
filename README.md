@@ -1,5 +1,11 @@
 # img-placeholder package
 
-A short description of your package.
+A simple placehold.it image plug-in for Atom!
 
-![A screenshot of your spankin' package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+After installing the package, simply hit the key command:
+
+`ctrl-cmd-p`
+
+This injects an `<img/>` tag with a placehold.it image into your code!
+
+<!-- ![A screenshot of your spankin' package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif) -->
