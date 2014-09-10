@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Enable img-placeholder': 'img-placeholder:toggle'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'img-placeholder'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'img-placeholder:toggle' }
+      ]
+    ]
+  }
+]
