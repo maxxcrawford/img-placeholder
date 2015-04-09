@@ -14,9 +14,14 @@ ImgPlaceholderView = require './img-placeholder-view'
 
 module.exports =
   activate: ->
-    atom.workspaceView.command "img-placeholder:insert", => @convert()
+    atom.workspaceView.command 'img-placeholder:insert', => @convert()
 
   convert: ->
     # This assumes the active pane item is an editor
     editor = atom.workspace.activePaneItem
-    editor.insertText("<img src='//placehold.it/600x400/013e89/FFFFFF.png'/>")
+
+    # Generate random hex color
+    letters = '0123456789abcdef'.split ''
+    randomColor = (letters[Math.floor(Math.random() * 16)] for i in [0..6]).join ''
+
+    editor.insertText "<img src='//placehold.it/600x400/" + randomColor + ".png'/>"
