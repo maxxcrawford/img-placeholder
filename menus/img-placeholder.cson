@@ -1,7 +1,7 @@
 # See https://atom.io/docs/latest/creating-a-package#menus for more details
 'context-menu':
   'atom-workspace':
-    { 'label': 'Enable img-placeholder', 'command': 'img-placeholder:toggle' }
+    { 'label': 'Insert placeholder img', 'command': 'img-placeholder:insert' }
 
 'menu': [
   {
@@ -9,7 +9,7 @@
     'submenu': [
       'label': 'img-placeholder'
       'submenu': [
-        { 'label': 'Toggle', 'command': 'img-placeholder:toggle' }
+        { 'label': 'Insert', 'command': 'img-placeholder:insert' }
       ]
     ]
   }

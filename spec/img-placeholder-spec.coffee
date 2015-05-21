@@ -13,18 +13,18 @@ describe "ImgPlaceholder", ->
     atom.workspaceView = new WorkspaceView
     activationPromise = atom.packages.activatePackage('img-placeholder')
 
-  describe "when the img-placeholder:toggle event is triggered", ->
+  describe "when the img-placeholder:insert event is triggered", ->
     it "attaches and then detaches the view", ->
       expect(atom.workspaceView.find('.img-placeholder')).not.toExist()
 
       # This is an activation event, triggering it will cause the package to be
       # activated.
-      atom.workspaceView.trigger 'img-placeholder:toggle'
+      atom.workspaceView.trigger 'img-placeholder:insert'
 
       waitsForPromise ->
         activationPromise
 
       runs ->
         expect(atom.workspaceView.find('.img-placeholder')).toExist()
-        atom.workspaceView.trigger 'img-placeholder:toggle'
+        atom.workspaceView.trigger 'img-placeholder:insert'
         expect(atom.workspaceView.find('.img-placeholder')).not.toExist()
