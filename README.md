@@ -6,8 +6,6 @@ After installing the package, simply hit the key command:
 
 `ctrl-cmd-p`
 
-This injects an `<img/>` tag with a placehold.it image into your code!
-
 ---
 
 ### Feature Improvements
