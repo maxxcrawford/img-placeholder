@@ -1,16 +1,21 @@
 # See https://atom.io/docs/latest/creating-a-package#menus for more details
+'atom-workspace': [
+    {
+        label: 'Packages'
+        submenu: [
+            label: 'img-placeholder'
+            submenu: [
+                {
+                    label: "Insert",
+                    command: 'img-placeholder:insert'
+                }
+            ]
+        ]
+    }
+]
 'context-menu':
-  'atom-workspace':
-    { 'label': 'Insert placeholder img', 'command': 'img-placeholder:insert' }
-
-'menu': [
-  {
-    'label': 'Packages'
-    'submenu': [
-      'label': 'img-placeholder'
-      'submenu': [
-        { 'label': 'Insert', 'command': 'img-placeholder:insert' }
-      ]
-    ]
-  }
+  'atom-workspace': [
+      {
+          label: 'Insert placeholder img', command: 'img-placeholder:insert'
+      }
 ]
