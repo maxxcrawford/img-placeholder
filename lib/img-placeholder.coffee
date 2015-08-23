@@ -1,4 +1,4 @@
-MyPackageView = require './img-placeholder'
+ImgPlaceholderView = require './img-placeholder-view'
 {CompositeDisposable} = require 'atom'
 
 module.exports =

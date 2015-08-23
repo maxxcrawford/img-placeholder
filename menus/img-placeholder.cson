@@ -1,21 +1,22 @@
-# See https://atom.io/docs/latest/creating-a-package#menus for more details
-'atom-workspace': [
-    {
-        label: 'Packages'
-        submenu: [
-            label: 'img-placeholder'
-            submenu: [
-                {
-                    label: "Insert",
-                    command: 'img-placeholder:insert'
-                }
-            ]
-        ]
-    }
-]
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
 'context-menu':
-  'atom-workspace': [
-      {
-          label: 'Insert placeholder img', command: 'img-placeholder:insert'
-      }
+  'atom-text-editor': [
+    {
+      'label': 'Toggle img-placeholder'
+      'command': 'img-placeholder:insert'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'img-placeholder'
+      'submenu': [
+        {
+          'label': 'Insert'
+          'command': 'img-placeholder:add'
+        }
+      ]
+    ]
+  }
 ]
