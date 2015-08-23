@@ -1,27 +1,22 @@
-ImgPlaceholderView = require './img-placeholder-view'
-
-# module.exports =
-#   imgPlaceholderView: null
-#
-#   activate: (state) ->
-#     @imgPlaceholderView = new ImgPlaceholderView(state.imgPlaceholderViewState)
-#
-#   deactivate: ->
-#     @imgPlaceholderView.destroy()
-#
-#   serialize: ->
-#     imgPlaceholderViewState: @imgPlaceholderView.serialize()
+MyPackageView = require './img-placeholder'
+{CompositeDisposable} = require 'atom'
 
 module.exports =
-  activate: ->
-    atom.workspaceView.command 'img-placeholder:insert', => @convert()
+  subscriptions: null
 
-  convert: ->
-    # This assumes the active pane item is an editor
-    editor = atom.workspace.activePaneItem
+  activate: ->
+    @subscriptions = new CompositeDisposable
+    @subscriptions.add atom.commands.add 'atom-workspace',
+      'img-placeholder:insert': => @insert()
+
+  deactivate: ->
+    @subscriptions.dispose()
+
+  insert: ->
+    editor = atom.workspace.getActiveTextEditor()
 
     # Generate random hex color
     letters = '0123456789abcdef'.split ''
     randomColor = (letters[Math.floor(Math.random() * 16)] for i in [0..6]).join ''
-
-    editor.insertText "<img src='//placehold.it/600x400/" + randomColor + ".png'/>"
+    placholderText = "<img src='//placehold.it/600x400/" + randomColor + ".png'/>"
+    editor.insertText(placholderText)
