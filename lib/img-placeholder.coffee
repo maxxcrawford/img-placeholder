@@ -17,6 +17,6 @@ module.exports =
 
     # Generate random hex color
     letters = '0123456789abcdef'.split ''
-    randomColor = (letters[Math.floor(Math.random() * 16)] for i in [0..6]).join ''
+    randomColor = (letters[Math.floor(Math.random() * 16)] for i in [0..5]).join ''
     placholderText = "<img src='//placehold.it/600x400/" + randomColor + ".png'/>"
     editor.insertText(placholderText)
