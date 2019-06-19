@@ -1,7 +1,7 @@
 {
   "name": "img-placeholder",
   "main": "./lib/img-placeholder",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Insert an img tag from placehold.it image into your code.",
   "activationCommands": {
     "atom-workspace": [
