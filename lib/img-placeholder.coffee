@@ -28,6 +28,8 @@ module.exports =
     if yiq >= 128 then contrast = "000000" else contrast = "FFFFFF"
 
     colorContrast = randomColor.toUpperCase() + "/" + contrast
-    imgSrcText = '<img src="//placehold.it/600x400/' + colorContrast + '"/>'
+
+    # Update URL to new placehold.it format
+    imgSrcText = '<img src="https://via.placeholder.com/600x400.jpg/' + colorContrast + '?text=%20"/>'
 
     editor.insertText(imgSrcText)
